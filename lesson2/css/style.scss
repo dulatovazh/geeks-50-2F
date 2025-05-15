@@ -1,0 +1,187 @@
+@import "variables.scss";
+@import "mixins.scss";
+@import "core.scss";
+
+.analytics {
+  .buttons {
+    margin-bottom: 64px;
+    .button_1 {
+      @include button;
+      @include flex-center;
+      background-color: #FFFFFF;
+      border: 1px solid #D0D5DD;
+      gap: 14px;
+    }
+    .button_2 {
+      @include button;
+      @include flex-center;
+      background-color: #7F56D9;
+      color: white;
+  }
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .mockup {
+    display: flex;
+
+  }
+}
+
+@include responsive(1920px) {
+    .container {
+      width: 1520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  h1 {
+    color: $color-black;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 72px;
+    letter-spacing: -2%;
+    text-align: center;
+  }
+  p {
+    width: 768px;
+    text-align: center;
+    margin: 24px auto 48px;
+  }
+    .buttons {
+      @include flex-center;
+      gap: 12px;
+    }
+    .button_1 {
+      width: 143px;}
+    .button_2 {
+      width: 121px;
+    }
+    .mockup {
+      width: 1520px;
+    }
+  }
+
+@include responsive(1280px) {
+  .container {
+    width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h1 {
+    color: $color-black;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 72px;
+    letter-spacing: -2%;
+    text-align: center;
+  }
+  p {
+    width: 768px;
+    text-align: center;
+    margin: 24px auto 48px;
+  }
+  .buttons {
+    @include flex-center;
+    gap: 12px;
+  }
+    .button_1 {
+      width: 143px;
+    }
+    .button_2 {
+      width: 121px;
+    }
+  .mockup {
+    width: 1120px;
+  }
+}
+
+@include responsive(360px) {
+  .container {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h1 {
+    font-size: 28px;
+    line-height: 140%;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+  }
+  .button_1 {
+    width: 300px;
+  }
+  .button_2 {
+    width: 300px;
+  }
+  .mockup {
+    width: 285px;
+  }
+  p {
+    width: 300px;
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+
+//:root {
+//  --color-white: #fff;
+//  --color-black: #000;
+//  --color-red: #f00;
+//  --primary-color: yellow;
+//  --secondary-color: orange;
+//  --border: 1px solid var(--border-color);
+//  --input-height: 42px;
+//  --container-width: 500px;
+//  --container-padding-width: 20px;
+//  --border-radius: 5px;
+//}
+//
+//
+//$color: blue;
+//
+//.btn {
+//  background-color: $color;
+//}
+//p {
+//  color: $color;
+//}
+//@mixin flex-center {
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//}
+//.container {
+//  @include flex-center;
+//  background-color: $color;
+//
+//  border: var(--border);
+//  border-radius: var(--border-radius);
+//}
+//@mixin custome-button ($bg-color,$text-color:white, $font-size:16px) {
+//  background-color: $bg-color;
+//  color: $text-color;
+//  font-size: $font-size;
+//  padding: 10px;
+//}
+//.btn  {
+//  @include custome-button(green);
+//}
+//
+//.h1  {
+//  color: var(--primary-color);
+//}
+//
+//@mixin responsive ($size) {
+//  @media (max-width: $size) {
+//    @content;
+//  }
+//}
+//@include responsive(768px) {
+//  body {
+//    background-color: red;
+//  }
+//}
