@@ -23,13 +23,14 @@ p {
     font-size: 20px;
     color: #667085;
     line-height: 30px;
+    margin-bottom: 7px;
 }
 .menu-container {
     margin-left: 376px;
     display: flex;
     flex-wrap: wrap;
     width: 768px;
-    margin-top: 64px;
+    margin-top: 57px;
     gap: 24px;
     align-items: center;
 }
@@ -69,24 +70,24 @@ p {
     color: #7F56D9;
     transition: all 0.5s;
 }
-#toggle {
+#toggle, #toggle2, #toggle3, #toggle4, #toggle5, #toggle6 {
     display: none;
 }
 .sign::after {
     content: "+";
     transition: all 0.2s ease;
 }
-#toggle:checked + .icon .sign::after {
+#toggle:checked + .icon .sign::after, #toggle2:checked + .icon .sign::after, #toggle3:checked + .icon .sign::after, #toggle4:checked + .icon .sign::after, #toggle5:checked + .icon .sign::after, #toggle6:checked + .icon .sign::after {
     content: "-";
 }
-.menu {
+.menu, .menu-2, .menu-3, .menu-4, .menu-5, .menu-6 {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
     transition: all 0.3s ease;
     margin-top: 35px;
 }
-#toggle:checked ~ .menu {
+#toggle:checked ~ .menu, #toggle2:checked ~ .menu-2, #toggle3:checked ~ .menu-3, #toggle4:checked ~ .menu-4, #toggle5:checked ~ .menu-5, #toggle6:checked ~ .menu-6   {
     max-height: 500px;
     opacity:1;
 }
