@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin-inline: auto;
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 1200px;
+  background-color: #E5E9EB;
+}
+
+input {
+  display: none;
+}
+
+label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  position: relative;
+}
+
+.icon {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border: 1px solid purple;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.icon::before {
+  content: "";
+  position: absolute;
+  background-color: purple;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 2px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.icon::after {
+  content: "";
+  position: absolute;
+  background-color: purple;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: opacity 0.5s ease, -webkit-transform 0.3s;
+  transition: opacity 0.5s ease, -webkit-transform 0.3s;
+  transition: transform 0.3s, opacity 0.5s ease;
+  transition: transform 0.3s, opacity 0.5s ease, -webkit-transform 0.3s;
+}
+
+input:checked + label .icon::after {
+  opacity: 0;
+}
+
+.content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.5s ease, opacity 0.5s ease;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+input:checked ~ .content {
+  max-height: 1000px;
+  opacity: 1;
+}
+
+.block {
+  width: 500px;
+  height: 500px;
+  background-color: red;
+  position: relative;
+}
+.block .block2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 250px;
+  background-color: blue;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
